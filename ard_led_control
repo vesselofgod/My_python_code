@@ -1,0 +1,20 @@
+const int xPin = A1;
+const int yPin = A0;
+const int buttonPin = 2;
+const int COLOR_RED_PIN = 11;
+const int COLOR_GREEN_PIN = 10;
+const int COLOR_BLUE_PIN = 9;
+void setup() {
+  pinMode(xPin, INPUT);
+  pinMode(yPin, INPUT);
+  pinMode(buttonPin, INPUT_PULLUP);
+  Serial.begin(9600);
+}
+void loop() {
+  int xi = analogRead(xPin)/ 4;
+  int yi = analogRead(yPin)/ 4;
+  int bi = digitalRead(buttonPin);
+  analogWrite(COLOR_RED_PIN, xi);
+  analogWrite(COLOR_GREEN_PIN, yi);
+  analogWrite(COLOR_BLUE_PIN, bi);
+}
