@@ -2,10 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-N = 20
-theta = np.linspace(0.0, 2 * np.pi, N, endpoint=False)
-radii = 0.1 * np.random.rand(N)
-width = np.pi / 4 * np.random.rand(N)
+N = 15
+theta = np.linspace(0.0, 7 * np.pi, N, endpoint=False)
+radii = 0.9 * np.random.rand(N)
+width = np.pi / 3 * np.random.rand(N)
 
 ax = plt.subplot(111, projection='polar')
 bars = ax.bar(theta, radii, width=width, bottom=0.0)
